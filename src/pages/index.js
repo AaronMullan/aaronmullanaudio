@@ -14,11 +14,12 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div >
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            {/* <h2 className="section-headline">Recent articles</h2> */}
+            <p>{author.node.title}</p>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -71,10 +72,10 @@ export const pageQuery = graphql`
           title
           heroImage: image {
             fluid(
-              maxWidth: 1180
+          
               maxHeight: 480
               resizingBehavior: PAD
-              background: "rgb:000000"
+              background: "rgb:075466"
             ) {
               ...GatsbyContentfulFluid_tracedSVG
             }

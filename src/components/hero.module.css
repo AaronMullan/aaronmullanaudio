@@ -10,7 +10,13 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  width: 100vw;
+  width: 95vw;
+  border: 1px solid #FFC631;
+  border-radius: .4em;
+}
+.imageContainer{
+  display: flex;
+  justify-content: center;
 }
 
 .heroDetails {

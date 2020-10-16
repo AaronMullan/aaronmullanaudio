@@ -56,7 +56,7 @@ li {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 5vmin;
 }
 
@@ -85,6 +85,9 @@ li {
 @media(min-width: 600px) {
   .wrapper {
     font-size: 18px;
+  }
+  .article-list {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 @media(min-width: 1000px) {

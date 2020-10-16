@@ -13,6 +13,8 @@
   width: 95vw;
   border: 1px solid #FFC631;
   border-radius: .4em;
+  display: flex;
+  justify-content: center;
 }
 .imageContainer{
   display: flex;

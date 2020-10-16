@@ -1,7 +1,16 @@
+.preview {
+  margin: 2vw;
+}
+
 .previewTitle {
   font-size: 1.5em;
+  letter-spacing: .02em;
   text-align: center;
 }
+.imageContainer {
+  margin: 2vw;
+}
+
 
 .tag {
   color: #A0A0A0;

@@ -1,3 +1,5 @@
+
+
 .hero {
   display: flex;
   justify-content: center;
@@ -7,4 +9,19 @@
   background: #e1e1e1;
   margin: -1em -2.5em 1em;
   font-size: 2em
+}
+
+.blogBody {
+  text-align: justify;
+  margin: 4vw;
+}
+
+b {
+  color: red;
+}
+
+.back p {
+  margin: 3vw 6vw;
+  color: #5E9CD9;
+  font-size: 200%;
 }

@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  background: #2A2721;
+  background: hsl(40, 12%, 15%);
   color: #E3DE4A;
   text-align: center;
 }
@@ -10,31 +10,32 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
- 
   width: 100vw;
 }
 
 .heroDetails {
   position: absolute;
-  background: rgba(0, 0, 0, 0.2);
-  left: 30%;
+  background: hsla(40, 12%, 15%, .7);
+  left: 40%;
   bottom: 60%;
   transform: translate(-50%, 0);
   font-size: 14px;
   padding: 0 0.5em;
-  border: 1px solid rgba(237, 234, 206, 0.2);
+  border: 2px solid hsla(210, 62%, 61%, .9);
   border-radius: .2em;
 }
 
 @media(min-width: 600px) {
   .heroDetails {
     font-size: 16px;
+    left: 30%;
   }
 }
 
 @media(min-width: 1000px) {
   .heroDetails {
     font-size: 20px;
+    left: 30%;
   }
 }
 

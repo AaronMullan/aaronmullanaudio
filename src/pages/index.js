@@ -12,6 +12,7 @@ class RootIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
+    console.log(author.node.subtitle);
     return (
       <Layout location={this.props.location}>
         <div >
@@ -19,7 +20,8 @@ class RootIndex extends React.Component {
           <Hero data={author.node} />
           <div className="wrapper">
             {/* <h2 className="section-headline">Recent articles</h2> */}
-            <p>{author.node.title}</p>
+            <h2>{author.node.title}</h2>
+            <h5>{author.node.subtitle}</h5>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -48,7 +50,7 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: PAD, background: "rgb:1F2022") {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
@@ -70,6 +72,7 @@ export const pageQuery = graphql`
             shortBio
           }
           title
+          subtitle
           heroImage: image {
             fluid(
           

@@ -47,7 +47,11 @@ li {
 .wrapper h2 {
   color: #C91611;
 }
-
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vh;
+}
 /**
  * article grid
  */

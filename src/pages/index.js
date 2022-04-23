@@ -7,37 +7,36 @@ import Layout from '../components/layout';
 import ArticlePreview from '../components/article-preview';
 
 class RootIndex extends React.Component {
-    render() {
-        const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-        const posts = get(this, 'props.data.allContentfulBlogPost.edges');
-        const [author] = get(this, 'props.data.allContentfulPerson.edges');
+  render() {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges');
+    const [author] = get(this, 'props.data.allContentfulPerson.edges');
 
-        console.log(author.node.subtitle);
-        return (
-            <Layout location={this.props.location}>
-                <div >
-                    <Helmet title={siteTitle} />
-                    <div className="heroContainer">
-                        <Hero data={author.node} />
-                    </div>
-                    <div className="wrapper">
-                        {/* <h2 className="section-headline">Recent articles</h2> */}
-                        <h2>{author.node.title}</h2>
-                        <h5>{author.node.subtitle}</h5>
-                        <ul className="article-list">
-                            {posts.map(({ node }) => {
-                                return (
-                                    <li key={node.slug}>
-                                        <ArticlePreview article={node} />
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
-            </Layout>
-        );
-    }
+    console.log(author.node.subtitle);
+    return (
+      <Layout location={this.props.location}>
+        <div >
+          <Helmet title={siteTitle} />
+          <div className="heroContainer">
+            <Hero data={author.node} />
+          </div>
+          <div className="wrapper">
+            <h2>{author.node.title}</h2>
+            <h5>{author.node.subtitle}</h5>
+            <ul className="article-list">
+              {posts.map(({ node }) => {
+                return (
+                  <li key={node.slug}>
+                    <ArticlePreview article={node} />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 }
 
 export default RootIndex;

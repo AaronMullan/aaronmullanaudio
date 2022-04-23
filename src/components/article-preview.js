@@ -12,7 +12,6 @@ export default ({ article }) => (
         <div className={styles.imageContainer}>
             <Img alt="" fluid={article.heroImage.fluid} />
         </div>
-        {/* <small>{article.publishDate}</small> */}
         <p
             dangerouslySetInnerHTML={{
                 __html: article.description.childMarkdownRemark.html,

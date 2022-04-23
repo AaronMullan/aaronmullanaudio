@@ -12,8 +12,6 @@ export default ({ data }) => (
         />
         <div className={styles.heroDetails}>
             <h1 className={styles.heroHeadline}>{data.name}</h1>
-            {/* <p className={styles.heroTitle}>{data.title}</p>
-      <p>{data.shortBio.shortBio}</p> */}
         </div>
     </div>
 );

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import React from "react";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
 
-import styles from './article-preview.module.css'
+import styles from "./article-preview.module.css";
 
 export default ({ article }) => (
   <div className={styles.preview}>
@@ -10,13 +10,12 @@ export default ({ article }) => (
       <Link to={`/blog/${article.slug}`}>{article.title}</Link>
     </h4>
     <div className={styles.imageContainer}>
-      <Img alt="" fluid={article.heroImage.fluid}  />
+      <Img alt="" fluid={article.heroImage.fluid} />
     </div>
-    {/* <small>{article.publishDate}</small> */}
     <p
       dangerouslySetInnerHTML={{
         __html: article.description.childMarkdownRemark.html,
       }}
     />
   </div>
-)
+);
